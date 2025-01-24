@@ -1,4 +1,11 @@
 Game Description:
+Instruction:
+
+Please update the directory of images according to your dedicated path of harddrive
+
+This will load the images and the game will run.
+
+
 
 Objective: 
 
