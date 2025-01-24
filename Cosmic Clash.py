@@ -1,7 +1,7 @@
 import pygame
 import random
 import sys
-import os  # Import os module to use join()
+import os
 
 pygame.init()
 
@@ -11,20 +11,21 @@ pygame.display.set_caption("Cosmic Clash")
 
 clock = pygame.time.Clock()
 
-# Define path to images
-image_path = r"D:\"
+# Get the current directory of the script and set the relative path for images
+script_dir = os.path.dirname(os.path.realpath(__file__))
+image_folder = os.path.join(script_dir, "images")
 
-# Use os.path.join() to load images
-background_img = pygame.image.load(os.path.join(image_path, "space background.jpg"))
+# Load images using relative paths
+background_img = pygame.image.load(os.path.join(image_folder, "space background.jpg"))
 background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
 
-spaceship_img = pygame.image.load(os.path.join(image_path, "Battleship.webp"))
+spaceship_img = pygame.image.load(os.path.join(image_folder, "Battleship.webp"))
 spaceship_img = pygame.transform.scale(spaceship_img, (100, 100))  # Adjust size if needed
 
-asteroid_img = pygame.image.load(os.path.join(image_path, "UFO.png"))
+asteroid_img = pygame.image.load(os.path.join(image_folder, "UFO.png"))
 asteroid_img = pygame.transform.scale(asteroid_img, (70, 70))  # Adjust size if needed
 
-bullet_img = pygame.image.load(os.path.join(image_path, "missile.jpg"))
+bullet_img = pygame.image.load(os.path.join(image_folder, "missile.jpg"))
 bullet_img = pygame.transform.scale(bullet_img, (10, 20))  # Adjust size if needed
 
 spaceship_x = WIDTH // 100
