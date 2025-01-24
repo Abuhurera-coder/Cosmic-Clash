@@ -14,7 +14,7 @@ pygame.display.set_caption("Cosmic Clash")
 clock = pygame.time.Clock()
 
 
-background_img = pygame.image.load( r"D:\images.jpeg")  # Replace with your background image
+background_img = pygame.image.load( r"D:\space backgroung.jpg")  # Replace with your background image
 background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
 
 spaceship_img = pygame.image.load(r"D:\Battleship.webp")  # Replace with your spaceship image
