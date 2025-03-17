@@ -11,22 +11,33 @@ pygame.display.set_caption("Cosmic Clash")
 
 clock = pygame.time.Clock()
 
-# Get the current directory of the script and set the relative path for images
-script_dir = os.path.dirname(os.path.realpath(__file__))
-image_folder = os.path.join(script_dir, "images")
+# Define relative path to the assets folder
+assets_path = os.path.join(os.path.dirname(__file__), "assets")
 
-# Load images using relative paths
-background_img = pygame.image.load(os.path.join(image_folder, "space background.jpg"))
-background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
+# Debug: Print the assets path
+print(f"Assets Path: {assets_path}")
 
-spaceship_img = pygame.image.load(os.path.join(image_folder, "Battleship.webp"))
-spaceship_img = pygame.transform.scale(spaceship_img, (100, 100))  # Adjust size if needed
+# Use os.path.join() to load images
+try:
+    spaceship_img = pygame.image.load(os.path.join(assets_path, "Battleship.webp"))
+    spaceship_img = pygame.transform.scale(spaceship_img, (100, 100))
+    
+    bullet_img = pygame.image.load(os.path.join(assets_path, "missile.jpg"))
+    bullet_img = pygame.transform.scale(bullet_img, (10, 20))  # Adjust size if needed
+    
+    
+    background_img = pygame.image.load(os.path.join(assets_path, "spacebackgroung.jpg"))
+    background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
 
-asteroid_img = pygame.image.load(os.path.join(image_folder, "UFO.png"))
-asteroid_img = pygame.transform.scale(asteroid_img, (70, 70))  # Adjust size if needed
 
-bullet_img = pygame.image.load(os.path.join(image_folder, "missile.jpg"))
-bullet_img = pygame.transform.scale(bullet_img, (10, 20))  # Adjust size if needed
+    asteroid_img = pygame.image.load(os.path.join(assets_path, "UFO.png"))
+    asteroid_img = pygame.transform.scale(asteroid_img, (70, 70))  # Adjust size if needed
+
+   
+except FileNotFoundError as e:
+    print(f"Error loading image: {e}")
+    pygame.quit()
+    sys.exit()
 
 spaceship_x = WIDTH // 100
 spaceship_y = HEIGHT - 100
