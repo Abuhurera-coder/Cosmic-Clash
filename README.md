@@ -1,59 +1,87 @@
-Game Description:
-Instruction:
+Cosmic Clash
 
-Please update the directory of images according to your dedicated path of harddrive
+Game Description
 
-This will load the images and the game will run.
+Cosmic Clash is a simple 2D space shooter game where players control a spaceship to dodge and destroy falling asteroids. The game provides an engaging introduction to game development using Python and Pygame.
 
+Instructions
 
+Ensure that you have Python installed on your system (preferably Python 3.x).
 
-Objective: 
+Install the required dependencies listed in requirements.txt.
+
+Update the image directory paths in the code to match your local setup.
+
+Run the game script to start playing.
+
+Installation
+
+1️⃣ Clone the Repository
+
+git clone https://github.com/YOUR-USERNAME/Cosmic-Clash.git
+cd Cosmic-Clash
+
+2️⃣ Install Dependencies
+
+Ensure you have Python installed, then install the required dependencies:
+
+pip install -r requirements.txt
+
+3️⃣ Update Image Paths
+
+Modify the directory paths for images in the game script to match your local system’s file structure.
+
+4️⃣ Run the Game
+
+To start the game, execute:
+
+python main.py
+
+Objective
 
 The player controls a spaceship that moves horizontally at the bottom of the screen. The goal is to avoid colliding with asteroids that randomly fall from the top while shooting them down for points.
 
-Gameplay:
+Gameplay
 
-The spaceship moves left or right using the arrow keys.
-The player can shoot bullets by pressing the spacebar.
-Asteroids appear randomly at the top and fall downward.
-If an asteroid collides with the spaceship, the game ends with a "Game Over" message.
-If a bullet collides with an asteroid, both are removed, and the player earns points.
-Scoring:
+Move the spaceship left and right using arrow keys.
 
-Points are gained by shooting asteroids. Each asteroid destroyed gives the player 10 points.
+Shoot bullets by pressing spacebar.
 
-Graphics: 
+Asteroids randomly spawn at the top and move downward.
 
-Background, spaceship, asteroid, and bullet images are used for visual effects, and the score is displayed at the top-left corner.
+If an asteroid collides with the spaceship, the game ends with a Game Over message.
 
-Key Features:
+Destroy asteroids by shooting them for points.
 
-Spaceship movement:
+Scoring
 
-Can move left and right.
+Each destroyed asteroid gives 10 points.
 
-Bullet shooting: 
+Graphics
 
-Bullets can be fired with spacebar.
+The game includes background, spaceship, asteroid, and bullet images for visual effects.
 
-Random asteroids: 
+The score is displayed in the top-left corner.
 
-Asteroids spawn at random intervals and move downward.
+Key Features
 
-Collision detection: 
+✅ Spaceship Movement: Move left and right.
+✅ Bullet Shooting: Fire bullets using the spacebar.
+✅ Random Asteroid Spawning: Asteroids spawn at random intervals.
+✅ Collision Detection:
 
-The game checks for collisions between the spaceship and asteroids as well as between bullets and asteroids.
+Checks for collisions between spaceship and asteroids.
 
-Controls:
+Checks for collisions between bullets and asteroids.
 
-Arrow keys (Left/Right): Move the spaceship.
+Controls
 
-Spacebar:
+🎮 Left/Right Arrow Keys – Move the spaceship
+🎮 Spacebar – Fire bullets
 
-Fire bullets.
-
-End Condition: 
+End Condition
 
 The game ends when the spaceship collides with an asteroid.
 
-This project provides a simple but fun introduction to game development with pygame, with mechanics like movement, collision detection, and object interaction.
+This project is a fun and simple introduction to game development with Pygame, incorporating mechanics like movement, collision detection, and object interaction.
+
